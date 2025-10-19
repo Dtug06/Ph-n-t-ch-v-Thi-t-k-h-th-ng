@@ -1,0 +1,182 @@
+bai 1:
+Giao dịch bán hàng (TPS)
+Phân tích xu hướng kinh doanh (DSS)
+Bảng tổng quan hiệu suất hàng tháng dành cho CEO (EIS)
+
+
+bai 2:
+dự án a:Waterfall (Mô hình thác nước)=>Phù hợp với dự án có yêu cầu rõ ràng, ổn định, ít thay đổi.
+dự án b:Agile (Phát triển linh hoạt)=>hợp cho dự án mobile cần cập nhật thường xuyên.Giúp đội ngũ liên tục cải tiến và ưu tiên giá trị cho người dùng.
+dự án c:Spiral (Mô hình xoắn ốc)=>Tập trung vào quản lý rủi ro trong mỗi vòng phát triển.Mỗi vòng lặp giúp đánh giá, thử nghiệm, giảm thiểu rủi ro, rất phù hợp cho hệ thống yêu cầu an toàn cao như ngân hàng.
+
+bai 3:
+-con người : Bao gồm người dùng (khách hàng đặt món), chủ quán/nhà hàng, tài xế giao hàng, và nhân viên quản trị hệ thống
+-Dữ liệu :họ tên, địa chỉ, số điện thoại, tài khoản,món ăn, menu, giá cả, khuyến mãi,mã đơn, thời gian, trạng thái, tổng tiền,Đánh giá, phản hồi, lịch sử giao dịch
+-Quy trình:
+Khách hàng chọn món → đặt đơn → thanh toán
+Nhà hàng nhận đơn → xác nhận → chuẩn bị món
+Hệ thống tự động tìm tài xế gần nhất → tài xế nhận đơn → giao hàng
+Khách hàng nhận món → đánh giá đơn hàng
+Quản trị viên giám sát, xử lý khiếu nại, cập nhật dữ liệu
+
+-phần mềm:gồm thiết bị vật lý để vận hành hệ thống
+
+bai4:
+
+planning: xác định tạo ứng dụng giúp học sinh và giảng viên điểm danh nhanh chóng, quy mô
+analysis:phân tích các chức năng chính
+design:Giao diện màn hình đăng nhập, kiến trúc hệ thông
+implementation: viết code cho từng chức năng
+testing: kiểm thử  tình huống thực tế
+deployment& maintenance:triển khai và duy trì bảo dưỡng để cập nhật tính năng
+
+
+
+
+Bai5:
++planning :
+- Xây dựng ứng dụng điểm danh sinh viên bằng mã QR để tự động hóa quá trình điểm danh
+Phạm vi hệ thống:Giảng viên,Sinh viên,Phòng đào tạo
+công nghệ: react native, nodejs express
++Requirement Analysis:
+Giảng viên :
+- Đăng nhập / đăng xuất.
+- Tạo lớp học và buổi học mới.
+- Sinh mã QR cho buổi học.
+- Xem danh sách sinh viên đã điểm danh.
+sinh viên:
+- Đăng nhập.
+- Quét mã QR để điểm danh.
+- Xem lịch sử điểm danh cá nhân.
+phòng đào tạo:
+- Xem thống kê điểm danh theo lớp, giảng viên, sinh viên.
+- Xuất báo cáo (PDF/Excel).
++System Design:
+Thiết kế kiến trúc tổng thể
+
+Hệ thống chia 3 tầng:
+
+Presentation Layer – Ứng dụng di động cho sinh viên & giảng viên (UI/UX).
+
+Application Layer – API xử lý nghiệp vụ (Node.js).
+
+Data Layer – Cơ sở dữ liệu (MongoDB hoặc Firebase).
+Class Diagram: mô tả các lớp (SinhVien, GiangVien, LopHoc, DiemDanh) và mối quan hệ giữa chúng.
+
+Sequence Diagram: mô tả luồng hoạt động “Sinh viên quét mã QR → Hệ thống ghi nhận điểm danh → Giảng viên xem kết quả”.
+
+
+
+Bai6:
+
+
+A. Mô tả chức năng người dùng có thể thực hiện trên ứng dụng học tiếng Anh → Use Case Diagram (Sơ đồ ca sử dụng)
+→ Dùng để mô tả các chức năng (use case) mà người dùng có thể thực hiện, ví dụ như: đăng nhập, chọn khóa học, làm bài, xem kết quả. Đồng thời thể hiện mối quan hệ giữa người dùng (actor) và chức năng hệ thống.
+
+B. Mô tả lớp NguoiDung, KhoaHoc, BaiHoc và quan hệ giữa chúng → Class Diagram (Sơ đồ lớp)
+→ Dùng để mô tả các lớp, thuộc tính, phương thức và mối quan hệ (association, inheritance, composition) giữa các lớp trong hệ thống.
+
+C. Mô tả luồng học viên bắt đầu → vào học → làm bài → hoàn thành → Activity Diagram (Sơ đồ hoạt động)
+→ Thể hiện luồng công việc hoặc quy trình (workflow) gồm các bước, điều kiện rẽ nhánh, và luồng tuần tự của hành động, tương tự như sơ đồ dòng chảy (flowchart).
+
+D. Mô tả cách hệ thống triển khai trên các máy chủ, thiết bị → Deployment Diagram (Sơ đồ triển khai)
+→ Dùng để mô tả kiến trúc vật lý của hệ thống, bao gồm các nút (nodes) như server, client, thiết bị di động và kết nối (connections) giữa chúng.
+
+E. Mô tả thứ tự tương tác giữa học viên và hệ thống khi nộp bài → Sequence Diagram (Sơ đồ trình tự)
+→ Thể hiện thứ tự gửi – nhận thông điệp (messages) giữa các đối tượng (actor, hệ thống, cơ sở dữ liệu) theo trục thời gian, giúp mô tả chi tiết quá trình nộp bài và phản hồi kết quả.
+
+
+Bai7:
+
+1. Lập kế hoạch
+Xác định mục tiêu, phạm vi, các bên liên quan và nguồn lực cần thiết. Đánh giá rủi ro và xây dựng kế hoạch triển khai.
+
+2. Phân tích yêu cầu
+Thu thập yêu cầu chức năng (đăng ký, xác nhận, theo dõi tiêm) và phi chức năng (bảo mật, hiệu năng, giao diện).
+
+3. Thiết kế hệ thống
+Thiết kế kiến trúc, giao diện, cơ sở dữ liệu và luồng xử lý. Sử dụng sơ đồ UML để mô tả chi tiết.
+
+4. Lập trình
+Phát triển các mô-đun như đăng ký, đặt lịch, xác nhận và quản lý dữ liệu. Kiểm thử đơn vị và tích hợp hệ thống.
+
+5. Kiểm thử
+Kiểm tra toàn hệ thống để phát hiện lỗi, đảm bảo đúng yêu cầu. Bao gồm kiểm thử chức năng, bảo mật, hiệu năng và giao diện.
+
+6. Triển khai & bảo trì
+Đưa hệ thống vào sử dụng, giám sát, sửa lỗi và cập nhật tính năng mới để đáp ứng nhu cầu thực tế.
+
+
+Bai8:
+1. Tác nhân và chức năng chính:
+
+Học viên: Đăng ký tài khoản, tham gia khóa học, làm bài, xem điểm và tiến độ.
+
+Giảng viên: Tạo bài học, chấm điểm, phản hồi, theo dõi lớp học.
+
+Admin: Quản lý tài khoản, thống kê, cấu hình hệ thống và giảng viên.
+
+2. Phân loại hệ thống thông tin:
+
+TPS: Xử lý giao dịch như đăng ký khóa học, nộp bài, cập nhật điểm.
+
+MIS: Cung cấp báo cáo, thống kê cho giảng viên và admin.
+
+DSS: Hỗ trợ ra quyết định như mở khóa học mới, điều chỉnh chương trình.
+
+3. Mô hình phát triển phần mềm: Agile
+
+Phù hợp vì hệ thống có nhiều vai trò, yêu cầu linh hoạt.
+
+Cho phép chia nhỏ dự án, kiểm thử liên tục, nhận phản hồi thường xuyên.
+
+4. Ba sơ đồ UML sử dụng:
+
+Use Case Diagram: Mô tả chức năng của từng tác nhân.
+
+Class Diagram: Thể hiện các lớp và quan hệ giữa chúng.
+
+Sequence Diagram: Mô tả trình tự tương tác khi thực hiện chức năng.
+
+
+
+Bai9:
+1. Tác nhân & chức năng:
+
+Khách hàng: Tạo đơn, thanh toán, theo dõi, hủy/đổi lịch, nhận thông báo.
+
+Tài xế: Nhận đơn, cập nhật trạng thái, ghi chú, xác nhận GPS.
+
+Điều phối viên: Gán đơn, điều phối giờ cao điểm, xử lý khiếu nại.
+
+Quản lý: Xem báo cáo, quản lý tài xế/phương tiện, cấu hình SLA.
+
+CEO: Dashboard tổng quan, báo cáo chiến lược.
+
+Hệ thống thứ 3: Thanh toán, SMS, GPS, kho, ERP.
+
+2. Phân loại hệ thống thông tin:
+
+TPS: Tạo đơn, cập nhật trạng thái, thanh toán.
+
+MIS: Báo cáo vận hành, tỷ lệ giao hàng, khiếu nại.
+
+DSS: Dự báo nhu cầu, tối ưu tuyến, phân bổ tài xế.
+
+EIS: Dashboard CEO, KPI, cảnh báo tồn đọng.
+
+3. Mô hình phát triển phần mềm: Agile + DevOps
+
+Phù hợp vì yêu cầu thay đổi thường xuyên, cần MVP sớm, tích hợp nhiều hệ thống, vận hành 24/7.
+
+Microservices giúp mở rộng, deploy độc lập, dễ scale.
+
+4. Sơ đồ UML sử dụng:
+
+Use Case Diagram: Mô tả chức năng theo tác nhân.
+
+Class Diagram: Thiết kế dữ liệu và quan hệ.
+
+Sequence Diagram: Trình tự tương tác nghiệp vụ.
+
+Deployment Diagram: Kiến trúc triển khai vật lý.
