@@ -1,0 +1,512 @@
+Bai 1:
+ Người dùng cuối (End Users)
+
+Là những người trực tiếp tương tác với hệ thống hàng ngày:
+
+Sinh viên: tìm kiếm sách, đặt mượn, tra cứu tình trạng sách.
+
+Giảng viên: tham khảo tài liệu phục vụ giảng dạy và nghiên cứu.
+
+Thủ thư: quản lý sách, xử lý nghiệp vụ mượn – trả, theo dõi vi phạm.
+
+ Mối quan tâm: dễ sử dụng, thao tác nhanh, dữ liệu chính xác.
+
+ Sponsor (Nhà tài trợ / Nhà quản lý đầu tư)
+
+Bao gồm:
+
+Ban giám hiệu trường
+
+Phòng tài chính
+
+ Mối quan tâm: hiệu quả hoạt động thư viện, tối ưu chi phí, báo cáo thống kê phục vụ ra quyết định.
+
+ Chuyên gia nghiệp vụ (Domain Experts)
+
+Thường là:
+
+Thủ thư trưởng
+
+Cán bộ phụ trách nghiệp vụ danh mục sách
+
+ Mối quan tâm: hệ thống phải tuân thủ đúng quy trình mượn – trả, phân loại sách theo chuẩn (Dewey, ISBN…), hạn trả và xử lý phạt.
+
+Bộ phận kỹ thuật (Technical Team)
+
+Gồm:
+
+Lập trình viên
+
+Quản trị cơ sở dữ liệu (DBA)
+
+IT support
+
+Kiểm thử phần mềm (QA)
+
+ Mối quan tâm: hệ thống dễ bảo trì, bảo mật dữ liệu, hiệu năng ổn định.
+
+ Bên thứ ba (Third Parties)
+
+Có thể là:
+
+Đơn vị cung cấp phần mềm tích hợp
+
+API dữ liệu sách (ISBN, metadata)
+
+Nhà cung cấp thiết bị: máy quét mã vạch, cổng từ an ninh
+
+Nhà xuất bản (nếu có tài liệu số)
+
+ Mối quan tâm: tích hợp dịch vụ suôn sẻ, hợp đồng – bản quyền rõ ràng.
+
+
+
+Bai2:
+ Yêu cầu chức năng (Functional Requirements)
+
+Đăng nhập / Xác thực
+Người dùng có thể đăng nhập bằng mật khẩu, OTP hoặc sinh trắc học (vân tay, FaceID).
+
+Quản lý tài khoản
+Xem số dư, lịch sử giao dịch, thông tin tài khoản.
+
+Chuyển tiền
+Chuyển khoản nội bộ hoặc liên ngân hàng và thông báo kết quả giao dịch.
+
+ Ghi nhớ: Đăng nhập – Xem tài khoản – Chuyển tiền → cơ bản & chuẩn đề thi 
+
+ Yêu cầu phi chức năng (Non-functional Requirements)
+
+Bảo mật
+Dữ liệu phải được mã hóa, có OTP khi giao dịch tài chính.
+
+Hiệu năng / Tốc độ đáp ứng
+Yêu cầu xử lý giao dịch nhanh, trả kết quả trong vài giây.
+
+Tính sẵn sàng / Ổn định
+Hệ thống phải hoạt động liên tục 24/7, hạn chế thời gian bảo trì.
+
+ Ghi nhớ: Bảo mật – Nhanh – Hoạt động ổn định
+
+
+
+Bai3:
+Môi trường hệ thống của Shopee bao gồm các yếu tố sau:
+
+Người dùng
+
+Người mua sử dụng ứng dụng để tìm kiếm và đặt hàng
+
+Người bán đăng sản phẩm và xử lý đơn hàng
+
+Bộ phận vận hành, chăm sóc khách hàng của Shopee
+
+Phần cứng
+
+Điện thoại thông minh hoặc máy tính để truy cập ứng dụng/web
+
+Máy chủ và trung tâm dữ liệu của Shopee
+
+Thiết bị quét mã vận đơn, hệ thống kho vận
+
+Phần mềm
+
+Ứng dụng Shopee trên Android/iOS
+
+Website Shopee
+
+Hệ thống quản lý đơn hàng, kho vận, thanh toán nội bộ
+
+Ứng dụng dành cho nhà bán hàng (Shopee Seller Center)
+
+Hệ thống bên ngoài
+
+Hệ thống thanh toán ngân hàng, ví điện tử
+
+Đơn vị giao hàng: Shopee Express, GHTK, VNPost…
+
+Cổng SMS/Email để gửi mã xác thực và thông báo
+
+Mạng xã hội hoặc dịch vụ quảng cáo tích hợp
+
+Quy trình nghiệp vụ
+
+Quy trình đặt hàng – thanh toán – giao nhận
+
+Quy trình trả hàng/hoàn tiền
+
+Quy trình xác thực và đánh giá người bán
+
+Quy trình khuyến mãi, voucher, flash sale
+
+Luật lệ, quy định
+
+Quy định về thương mại điện tử của Nhà nước
+
+Luật bảo vệ dữ liệu cá nhân
+
+Quy định thuế đối với người bán
+
+Quy định về kiểm duyệt sản phẩm (hàng cấm, hàng giả)
+
+
+
+Bai4:
+Giới thiệu
+Trình bày mục tiêu, phạm vi và đối tượng sử dụng của hệ thống học trực tuyến. Giúp người đọc hiểu hệ thống sẽ giải quyết vấn đề gì.
+
+Tổng quan hệ thống
+Mô tả hệ thống ở mức cao: chức năng chính, các tác nhân và cách hệ thống tương tác với môi trường. Là phần mô tả cái nhìn tổng thể trước khi đi vào chi tiết.
+
+Yêu cầu chức năng
+Liệt kê các chức năng mà hệ thống phải cung cấp, ví dụ đăng nhập, quản lý khóa học, xem bài giảng, làm bài kiểm tra. Mỗi chức năng cần mô tả chi tiết đầu vào, xử lý và kết quả.
+
+Yêu cầu phi chức năng
+Trình bày các yêu cầu về hiệu năng, bảo mật, độ tin cậy, khả năng mở rộng và giao diện người dùng. Đảm bảo chất lượng vận hành của hệ thống.
+
+Mô hình dữ liệu và giao diện
+Mô tả cấu trúc dữ liệu cần lưu trữ như bảng người dùng, khóa học, bài học. Kèm theo phác thảo giao diện chính để giúp hình dung cách người dùng tương tác.
+
+Ràng buộc và tiêu chuẩn
+Đề cập các quy định, tiêu chuẩn kỹ thuật hoặc pháp lý hệ thống phải tuân theo, ví dụ quy định bảo vệ dữ liệu người học, chuẩn SCORM cho nội dung học.
+
+Giả định và phụ thuộc
+Liệt kê các giả định khi xây dựng hệ thống và những yếu tố bên ngoài mà hệ thống phụ thuộc như nền tảng máy chủ, dịch vụ thanh toán.
+
+Tiêu chí nghiệm thu
+Mô tả cách đánh giá để xác nhận hệ thống hoàn thành đúng yêu cầu. Giúp kiểm thử và nghiệm thu có căn cứ rõ ràng.
+
+
+
+Bai5:
+1. Phỏng vấn (Interview)
+
+Ưu điểm:
+Giúp thu thập thông tin sâu, cụ thể; có thể hỏi lại hoặc giải thích để làm rõ yêu cầu.
+
+Hạn chế:
+Tốn thời gian, phụ thuộc vào khả năng diễn đạt của người được phỏng vấn; dễ bị chủ quan.
+
+Khi nên dùng:
+Khi cần hiểu rõ quy trình nghiệp vụ, hoặc khi hệ thống phức tạp, cần khai thác kiến thức chuyên gia.
+
+Tình huống ví dụ:
+Phỏng vấn kế toán trưởng để hiểu quy trình lập báo cáo tài chính cho phần mềm kế toán.
+
+2. Bảng câu hỏi (Questionnaire)
+
+Ưu điểm:
+Thu thập dữ liệu từ nhiều người cùng lúc, tiết kiệm thời gian, dễ tổng hợp và phân tích thống kê.
+
+Hạn chế:
+Thông tin thu được thường khái quát, thiếu chiều sâu; khó làm rõ câu trả lời không rõ ràng.
+
+Khi nên dùng:
+Khi cần khảo sát nhu cầu hoặc mức độ hài lòng của số lượng người dùng lớn.
+
+Tình huống ví dụ:
+Gửi bảng khảo sát cho 500 sinh viên để tìm hiểu nhu cầu sử dụng hệ thống học trực tuyến.
+
+3. Quan sát (Observation)
+
+Ưu điểm:
+Giúp thấy trực tiếp cách người dùng thực hiện công việc, tránh sai lệch do mô tả chủ quan.
+
+Hạn chế:
+Có thể ảnh hưởng đến hành vi người được quan sát; tốn thời gian và khó áp dụng với quy trình phức tạp.
+
+Khi nên dùng:
+Khi muốn hiểu quy trình thực tế, đặc biệt là công việc mang tính thao tác hoặc thủ công.
+
+Tình huống ví dụ:
+Quan sát nhân viên thư viện thực hiện việc cho mượn và trả sách để thiết kế quy trình tự động hóa.
+
+4. Nghiên cứu tài liệu (Document Analysis)
+
+Ưu điểm:
+Cung cấp thông tin chính xác, có căn cứ; giúp hiểu rõ quy trình hiện hành và quy định hiện có.
+
+Hạn chế:
+Tài liệu có thể cũ, không cập nhật; khó hiểu nếu thiếu bối cảnh thực tế.
+
+Khi nên dùng:
+Khi hệ thống hiện có đã có tài liệu quy trình, báo cáo, biểu mẫu; dùng để đối chiếu hoặc kiểm tra yêu cầu.
+
+Tình huống ví dụ:
+Xem sổ tay nghiệp vụ và các biểu mẫu đơn hàng của công ty để thiết kế hệ thống quản lý bán hàng.
+
+
+
+Bai6:
+Các yếu tố môi trường ảnh hưởng đến hệ thống quản lý bệnh viện và tác động của chúng
+- 1. Yếu tố pháp lý (Luật bảo mật dữ liệu y tế, quy định khám chữa bệnh,…)
+
+Tác động:
+→ Hệ thống phải có cơ chế bảo mật nâng cao: phân quyền chặt chẽ, mã hóa dữ liệu bệnh án, lưu vết truy cập, tuân thủ các quy định như bảo mật dữ liệu cá nhân.
+→ Đảm bảo khả năng tạo báo cáo đúng chuẩn theo quy định Bộ Y tế.
+
+- 2. Yếu tố hạ tầng kỹ thuật (mạng nội bộ, server, thiết bị đầu cuối)
+
+Tác động:
+→ Cần thiết kế hệ thống hỗ trợ hoạt động ổn định 24/7, tốc độ xử lý nhanh.
+→ Phù hợp nhiều thiết bị: máy tính, máy quét mã vạch, máy xét nghiệm kết nối hệ thống (IoT – HL7).
+
+- 3. Yếu tố người dùng (bác sĩ, y tá, nhân viên hành chính, bệnh nhân)
+
+Tác động:
+→ UI/UX đơn giản, dễ thao tác, hỗ trợ đa ngôn ngữ nếu cần.
+→ Phân quyền theo chức năng nghề nghiệp và quy trình làm việc thực tế.
+
+- 4. Quy trình quản lý bệnh viện (quy trình khám bệnh, cấp cứu, xét nghiệm,…)
+
+Tác động:
+→ Hệ thống phải tích hợp luồng xử lý phức tạp: đăng ký → khám → chỉ định cận lâm sàng → điều trị → thanh toán.
+→ Cho phép tùy chỉnh quy trình theo từng bệnh viện.
+
+- 5. Mức độ tích hợp với hệ thống khác (BHXH, hệ thống xét nghiệm LIS, dược,…)
+
+Tác động:
+→ Yêu cầu giao tiếp qua API/HL7/DICOM để đồng bộ dữ liệu.
+→ Giảm nhập liệu thủ công và sai sót, cần khả năng mapping dữ liệu.
+
+- 6. Khả năng mở rộng và hiệu năng (số bệnh nhân lớn vào giờ cao điểm)
+
+Tác động:
+→ Thiết kế kiến trúc microservices hoặc scaling linh hoạt.
+→ Database tối ưu cho giao dịch lớn, có cơ chế caching và phân vùng dữ liệu.
+
+- 7. Yếu tố bảo mật và an ninh mạng
+
+Tác động:
+→ Xác thực đa lớp, chống tấn công như SQL Injection, ransomware.
+→ Chính sách sao lưu dữ liệu định kỳ và cơ chế khôi phục thảm họa.
+
+- 8. Văn hóa & tổ chức (sự chấp nhận công nghệ của nhân viên)
+
+Tác động:
+→ Cần đào tạo người dùng, cung cấp tài liệu hướng dẫn chi tiết.
+→ Giao diện trực quan, giảm thay đổi đột ngột quy trình làm việc.
+
+- 9. Yếu tố tài chính và ngân sách bệnh viện
+
+Tác động:
+→ Chọn giải pháp công nghệ phù hợp chi phí: Cloud/hybrid/on-premise.
+→ Ưu tiên tính module hóa: triển khai từng phần theo ngân sách.
+
+
+
+Bai7:
+| Stakeholder                  | Vai trò                                             | Mối quan tâm                                                                    | Mức độ ưu tiên |
+| ---------------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------- | -------------- |
+| Khách hàng đặt hàng          | Người tạo đơn và theo dõi hành trình đơn hàng       | Giao hàng đúng hẹn; theo dõi trạng thái minh bạch; hỗ trợ nhanh; chi phí hợp lý | Critical       |
+| Nhân viên giao hàng          | Thực hiện nhận hàng, giao hàng, cập nhật trạng thái | Lộ trình tối ưu; tránh nhầm lẫn đơn; app dễ thao tác; bảo đảm an toàn           | Major          |
+| Quản lý vận hành             | Theo dõi hiệu suất giao hàng toàn hệ thống          | Báo cáo kịp thời; phân tích vùng tồn đọng; quản lý nhân sự giao hàng            | Critical       |
+| Đối tác cửa hàng / người bán | Gửi hàng cho khách                                  | Đồng bộ đơn nhanh; kiểm soát hoàn trả; thanh toán minh bạch                     | Major          |
+| Bộ phận chăm sóc khách hàng  | Hỗ trợ khi có vấn đề phát sinh                      | Truy cập nhanh thông tin đơn; lịch sử liên hệ với khách; tránh khiếu nại        | Minor          |
+
+
+
+
+Bai8:
+quy trình mua hàng online trên một sàn thương mại điện tử.
+
+Mô tả quy trình ngắn – Mua hàng online
+
+Người dùng đăng nhập vào hệ thống, tìm sản phẩm cần mua, thêm vào giỏ hàng, sau đó thực hiện thanh toán. Hệ thống xác nhận đơn hàng, cập nhật trạng thái và thông báo cho người dùng cho đến khi giao hàng hoàn tất.
+
+Yêu cầu chức năng (Functional Requirements)
+
+Đăng ký/Đăng nhập tài khoản
+Hệ thống cho phép người dùng tạo tài khoản mới và đăng nhập bằng thông tin hợp lệ.
+
+Tìm kiếm và xem thông tin sản phẩm
+Người dùng có thể tìm sản phẩm theo tên, danh mục và xem chi tiết như giá, mô tả, đánh giá.
+
+Thêm và quản lý giỏ hàng
+Người dùng có thể thêm sản phẩm vào giỏ, cập nhật số lượng hoặc xóa sản phẩm khỏi giỏ.
+
+Thanh toán và tạo đơn hàng
+Hệ thống hỗ trợ các phương thức thanh toán (ví dụ: ví điện tử, thẻ ngân hàng) và tạo đơn hàng thành công.
+
+Yêu cầu phi chức năng (Non-functional Requirements)
+
+Hiệu năng
+Hệ thống phải phản hồi tìm kiếm sản phẩm trong vòng dưới 3 giây để đảm bảo trải nghiệm tốt.
+
+Bảo mật
+Dữ liệu thanh toán và thông tin cá nhân phải được mã hóa và tuân thủ các tiêu chuẩn an toàn thông tin.
+
+Khả dụng
+Hệ thống cần đảm bảo hoạt động liên tục với thời gian uptime tối thiểu 99.5% để người dùng luôn truy cập được.
+
+
+
+Bai9:
+1. Giới thiệu
+
+1.1 Mục đích tài liệu
+Nêu lý do xây dựng SRS, đối tượng sử dụng (khách hàng, developer, tester).
+1.2 Phạm vi hệ thống
+Mô tả ngắn về hệ thống đặt món, bao gồm: chọn món, thanh toán, theo dõi trạng thái.
+1.3 Thuật ngữ và định nghĩa
+Giải thích các từ viết tắt, từ chuyên môn (POS, Order ID...).
+1.4 Tài liệu tham khảo
+Danh sách tài liệu liên quan và tiêu chuẩn cần tuân theo.
+
+2. Tổng quan hệ thống
+
+2.1 Bối cảnh nghiệp vụ
+Mô tả quán ăn, khách hàng, nhân viên tiếp nhận, bếp – và cách họ tương tác.
+2.2 Chức năng cấp cao của hệ thống
+Tóm tắt các chức năng chính (đặt món, thông báo bếp, quản lý đơn...).
+2.3 Đối tượng và đặc điểm người dùng
+Mô tả từng nhóm người dùng: khách hàng, nhân viên thu ngân, nhân viên bếp, quản lý.
+
+3. Yêu cầu chức năng
+
+3.1 Đặt món tại bàn
+Khách xem menu, chọn món, gửi yêu cầu đến bếp.
+3.2 Cập nhật trạng thái chế biến
+Bếp cập nhật tiến độ món → khách và nhân viên biết được.
+3.3 Thanh toán hóa đơn
+Thanh toán trực tiếp hoặc QR, phát hành hóa đơn.
+3.4 Quản lý menu
+Quản lý món ăn, giá, trạng thái hết hàng.
+3.5 Báo cáo và thống kê
+Quản lý xem doanh thu, số lượng món bán chạy.
+
+(Mỗi yêu cầu có thể mở rộng thêm mô tả và tiêu chí chấp nhận trong bản chi tiết.)
+
+4. Yêu cầu phi chức năng
+
+4.1 Hiệu năng
+Thời gian phản hồi khi chọn món tối đa X giây.
+4.2 Bảo mật
+Phân quyền người dùng, mã hóa thanh toán.
+4.3 Khả dụng
+Hệ thống phải hoạt động ổn định trong giờ mở quán.
+4.4 Dễ sử dụng
+Giao diện đơn giản, dễ thao tác với mọi độ tuổi.
+
+5. Giao diện và thiết kế sơ bộ
+
+5.1 Giao diện người dùng
+Phác thảo màn hình menu, đặt món, theo dõi trạng thái.
+5.2 Ràng buộc thiết kế
+Quán có thể chỉ dùng máy tính bảng nội bộ hoặc thiết bị có màn hình cảm ứng.
+5.3 Luồng tương tác người dùng
+Mô tả các bước thao tác từ chọn món đến thanh toán.
+
+6. Các yêu cầu ràng buộc khác
+
+6.1 Phần cứng và phần mềm
+POS, máy tính bảng, mạng nội bộ…
+6.2 Quy định pháp lý
+Tuân thủ quy định về hóa đơn, dữ liệu cá nhân.
+6.3 Khả năng mở rộng
+Có thể phát triển thành đặt món từ xa (online).
+
+7. Phụ lục
+
+7.1 Use Case chi tiết
+Mô tả các kịch bản nghiệp vụ.
+7.2 Sơ đồ UML
+Use Case Diagram, Activity Diagram…
+
+
+
+
+Bai10:
+1. Yếu tố môi trường ảnh hưởng đến hệ thống
+
+Người dùng hệ thống: ứng viên, nhà tuyển dụng, HR, ban lãnh đạo.
+
+Phần cứng: máy chủ lưu trữ dữ liệu, máy tính nhân viên, thiết bị di động ứng viên.
+
+Phần mềm: trình duyệt web, hệ điều hành, hệ thống quản trị cơ sở dữ liệu.
+
+Hệ thống bên ngoài: mạng xã hội (LinkedIn, Facebook), email, hệ thống quản lý lương, cổng xác thực.
+
+Quy trình nghiệp vụ: tiếp nhận hồ sơ → sàng lọc → phỏng vấn → đánh giá → chào nhận việc.
+
+Luật lệ & quy định: bảo mật dữ liệu cá nhân (thông tin ứng viên), pháp luật lao động, lưu trữ hồ sơ.
+
+Các yếu tố trên tác động trực tiếp đến yêu cầu kỹ thuật như: bảo mật trong truyền dữ liệu, tích hợp API, đảm bảo hệ thống hoạt động đa nền tảng.
+2. Phân tích Stakeholders
+| Stakeholder                     | Mối quan tâm                                           |
+| ------------------------------- | ------------------------------------------------------ |
+| Ứng viên                        | Nộp hồ sơ dễ dàng, theo dõi trạng thái, phản hồi nhanh |
+| Nhân viên HR                    | Quản lý hồ sơ, lọc ứng viên, sắp lịch phỏng vấn        |
+| Nhà tuyển dụng (Hiring Manager) | Đánh giá ứng viên phù hợp vị trí, xem CV nhanh         |
+| Ban lãnh đạo                    | Xem báo cáo tuyển dụng, hiệu quả nguồn ứng viên        |
+| Bộ phận IT                      | Bảo trì hệ thống, bảo mật và hiệu năng                 |
+| Đối tác tuyển dụng (bên thứ ba) | Đồng bộ hồ sơ và dữ liệu đăng tuyển                    |
+3. Các nguồn thu thập yêu cầu
+
+Phỏng vấn nhân viên HR và quản lý tuyển dụng
+
+Khảo sát ứng viên từng ứng tuyển tại công ty
+
+Quan sát thực tế quy trình tuyển dụng hiện hành
+
+Phân tích tài liệu, biểu mẫu tuyển dụng hiện dùng
+
+Tham khảo quy định pháp luật và chính sách công ty
+
+4. Một số yêu cầu của hệ thống
+4.1. Yêu cầu chức năng (Functional)
+
+Quản lý hồ sơ ứng viên
+Cho phép tạo, chỉnh sửa, lưu trữ và tra cứu hồ sơ.
+
+Sàng lọc & phân loại ứng viên
+Lọc theo vị trí, kỹ năng, kinh nghiệm.
+
+Quản lý lịch phỏng vấn
+HR đặt lịch, ứng viên nhận thông báo qua email.
+
+Cập nhật trạng thái tuyển dụng
+(Đã nộp – Sàng lọc – Phỏng vấn – Đạt/Không đạt)
+
+Báo cáo tuyển dụng
+Hiển thị số lượng ứng viên theo vị trí, nguồn tuyển dụng.
+
+4.2. Yêu cầu phi chức năng (Non-functional)
+
+Bảo mật
+Phân quyền theo vai trò; mã hóa dữ liệu ứng viên.
+
+Tính khả dụng
+Hệ thống bảo đảm uptime 99% để HR truy cập liên tục.
+
+Khả năng mở rộng
+Dễ tích hợp thêm các nền tảng tuyển dụng mới trong tương lai.
+
+Tính dễ sử dụng
+Giao diện thân thiện, hỗ trợ đa ngôn ngữ.
+
+Hiệu năng
+Thời gian tải hồ sơ < 2 giây.
+
+5. Gợi ý cấu trúc tài liệu mô tả yêu cầu (SRS)
+
+Giới thiệu
+Mục đích, phạm vi hệ thống, đối tượng sử dụng, thuật ngữ.
+
+Tổng quan hệ thống
+Bối cảnh, chức năng tổng quát, phân loại người dùng.
+
+Yêu cầu chức năng
+Mô tả từng chức năng theo Use Case.
+
+Yêu cầu phi chức năng
+Bảo mật, hiệu năng, khả dụng…
+
+Ràng buộc hệ thống
+Phần cứng, phần mềm, pháp lý, tích hợp.
+
+Mẫu giao diện và sơ đồ quy trình
+Use Case Diagram, Activity Diagram, Mockup.
+
+Phụ lục
+Biểu mẫu nhập liệu, thuật ngữ, ma trận theo dõi yêu cầu.
